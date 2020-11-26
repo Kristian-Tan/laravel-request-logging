@@ -61,4 +61,10 @@ x-ratelimit-remaining: 58
 {"token_type":"Bearer","expires_in":31536000,"access_token":"XXXXXXXXXXXXXXX.XXXXXXXXXXXXXXX.XXXXXXXXXXXXXXX","refresh_token":"XXXXXXXXXXXXXXX"}
 
 ```
-
+- readlog optional second arguments: use non-space-separated flags ```-lthbHB``` to customize output
+    - ```l``` cut long request parameter in request header, request body, and response header to limit 50 character (useful for request with long parameter like access token or long user agent)
+    - ```t``` do not show timestamp
+    - ```h``` do not show request header
+    - ```b``` do not show request body
+    - ```H``` do not show response body
+    - ```B``` do not show response body
