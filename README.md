@@ -31,6 +31,34 @@
 - to ease viewing of such log, use readlog.php in this repository: ```php readlog.php storage/logs/laravel.log```, where first argument is path to laravel's log, or if the file doesn't exist the first argument will be treated as the log that needs decoding, or if the first argument don't exist (as in calling ```php readlog.php```), it will default to read from ```storage/logs/laravel.log```
 - result example:
 ```
-TODO
+===
+[2020-11-25 16:08:19]
+REQUEST => POST https://myhost/oauth/token
+
+content-type: application/x-www-form-urlencoded
+content-length: 1048
+user-agent: Dalvik/2.1.0 (Linux; U; Android 7.1.1; Android SDK built for x86 Build/NYC)
+host: myhost
+connection: Keep-Alive
+accept-encoding: gzip
+
+code_verifier=XXXXXXXXXXXXXXX
+client_id=XXXXXXXXXXXXXXX
+redirect_uri=oauth2://sso8
+code=XXXXXXXXXXXXXXX
+grant_type=authorization_code
+
+---
+RESPONSE => 200
+
+pragma: no-cache
+cache-control: no-store, private
+content-type: application/json; charset=UTF-8
+date: Wed, 25 Nov 2020 09:08:19 GMT
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 58
+
+{"token_type":"Bearer","expires_in":31536000,"access_token":"XXXXXXXXXXXXXXX.XXXXXXXXXXXXXXX.XXXXXXXXXXXXXXX","refresh_token":"XXXXXXXXXXXXXXX"}
+
 ```
 
